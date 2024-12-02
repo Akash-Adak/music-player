@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
+    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://kit.fontawesome.com/585143586a.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+  
+        <section id="AllInBody">
+          <div id="ContentWarpper">
+            <div id="WholeCardContainer">
+              <div id="MusicDesc">
+                <h2 id="SongName"></h2>
+                <p id="Artist"></p>
+              </div>
+              <div id="MusicImg">
+                <img draggable="false" id="SongImg" alt="Music Image " />
+              </div>
+              <audio></audio>
+    
+              <div id="Progress_elements">
+                <div id="Progressduration">
+                  <div id="Start">0 : 0</div>
+                  <div id="End">0 : 0</div>
+                </div>
+                <div id="ProgressMeterContainer">
+                  <div id="ProgrssMeterChild"></div>
+                </div>
+              </div>
+    
+              <div id="MusicControls">
+                <div class="control" title="Previous Song">
+                  <i id="Previous" class="fas fa-backward"></i>
+                </div>
+                <div class="control" title="Pause/ play">
+                  <i id="PausePlay" class="fas fa-play"></i>
+                </div>
+                <div class="control" title="Next Music">
+                  <i id="Next" class="fas fa-forward"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      
+        
+
+    <script src="script.js"></script>
+</body>
+</html>
