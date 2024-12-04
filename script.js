@@ -179,7 +179,7 @@ function populatePlaylist() {
 function highlightPlayingSong(index) {
     const items = playlistEl.getElementsByTagName('li');
     for (let i = 0; i < items.length; i++) {
-        if (i+1 === index) {
+        if (i=== index) {
             items[i].classList.add('playing');
         } else {
             items[i].classList.remove('playing');
