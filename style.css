@@ -254,3 +254,121 @@
 
 
 
+
+  /* Playlist Container Styles */
+#PlaylistContainer {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.986), rgba(12, 12, 12, 0.651)), url(https://img.freepik.com/premium-photo/music-notes-background_861724-28969.jpg);
+   
+}
+
+#PlaylistContainer h3 {
+  font-size: 24px;
+  color: #d29393;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+#Playlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #e98c8c;
+}
+
+#Playlist li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #e85d5d;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#Playlist li:hover {
+  background: #300e25;
+}
+
+#Playlist li:last-child {
+  border-bottom: none;
+}
+
+#Playlist li span {
+  font-size: 16px;
+  color: #555;
+  font-family: 'Arial', sans-serif;
+}
+
+#Playlist li .play-icon {
+  font-size: 18px;
+  color: #333;
+}
+
+
+/* #Playlist li:hover .play-icon {
+  color: #007BFF;
+} */
+
+/* Highlight currently playing song */
+#Playlist li.playing {
+  background: #8c364a;
+  color: rgb(241, 236, 236);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #PlaylistContainer {
+      padding: 15px;
+  }
+  
+  #PlaylistContainer h3 {
+      font-size: 20px;
+  }
+
+  #Playlist li {
+      padding: 8px 12px;
+  }
+
+  #Playlist li span {
+      font-size: 14px;
+  }
+
+  #Playlist li .play-icon {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #PlaylistContainer {
+      padding: 10px;
+  }
+  
+  #PlaylistContainer h3 {
+      font-size: 18px;
+  }
+
+  #Playlist li {
+      padding: 6px 10px;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  #Playlist li span {
+      font-size: 12px;
+  }
+
+  #Playlist li .play-icon {
+      font-size: 14px;
+  }
+}
+
+
+
+
+
+
