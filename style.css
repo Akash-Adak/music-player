@@ -174,7 +174,7 @@
     text-shadow: 1px 1px 1px white;
   }
   
-   #Progress_elements #Progressduration {
+   #Progress_elements #Progressduration  {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -185,7 +185,8 @@
             align-items: center;
   }
   
-  #AllInBody #ContentWarpper #Progress_elements #ProgressMeterContainer {
+  
+  #AllInBody #ContentWarpper #Progress_elements  #ProgressMeterContainer {
     width: 90%;
     height: 7px;
     background: white;
@@ -318,6 +319,7 @@
 #Playlist li.playing {
   background: #8c364a;
   color: rgb(241, 236, 236);
+
 }
 
 /* Media Queries */
@@ -366,6 +368,39 @@
       font-size: 14px;
   }
 }
+
+
+/* 
+button.active {
+  background-color: #007BFF;
+  color: white;
+} */
+
+/* Style for the shuffle button */
+#Shuffle {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0f141b; 
+  border: 2px solid #c55861;
+  border-radius: 25px;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease, transform 0.3s ease; */
+}
+
+#Shuffle:hover {
+  background-color: #a23747; /* Darker blue on hover */
+
+ } 
+
+#Shuffle.active {
+  background-color: #b23131; /* Even darker blue when active (clicked) */
+  /* transform: scale(0.95); Slightly shrink button when clicked */
+}
+
 
 
 
