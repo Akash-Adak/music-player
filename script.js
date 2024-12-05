@@ -86,6 +86,8 @@ const songDataBase = [
   },
 ];
 
+
+
 const loadMusic = () => {
   audio.src = songDataBase[index].songSrc;
   artist.textContent = songDataBase[index].artist;
@@ -115,6 +117,7 @@ const play = () => {
   isPlaying = true;
   audio.play();
   playPauseButton.classList.replace("fa-play", "fa-pause");
+  // highlightPlayingSongI(index);
 
 };
 const pause = () => {
@@ -157,29 +160,32 @@ progressBar.addEventListener("click", (event) => {
 
 
 
-
-
-
-
-
-
-
 function populatePlaylist() {
     songDataBase.forEach((song, index) => {
         const li = document.createElement('li');
-        li.textContent = `${song.title} - ${song.artist}`;
+        li.textContent = `${song.title} -- ${song.artist}`;
+     
+        li.id=`song-${index}`;
+          
         li.addEventListener('click', () => {
-            loadMusic(index);
-            play();
+          playSongList(li.id);
         });
         playlistEl.appendChild(li);
+  
     });
 }
 
+function playSongList(songId){
+
+  const idx=parseInt(songId.split('-')[1],10);
+  index=idx;
+  loadMusic();
+  play();
+}
 function highlightPlayingSong(index) {
     const items = playlistEl.getElementsByTagName('li');
     for (let i = 0; i < items.length; i++) {
-        if (i=== index) {
+        if (i === index) {
             items[i].classList.add('playing');
         } else {
             items[i].classList.remove('playing');
