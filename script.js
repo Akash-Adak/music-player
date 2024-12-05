@@ -193,6 +193,31 @@ function highlightPlayingSong(index) {
     }
 }
 
+let isShuffling = false;
+let isRepeating = false;
+
+const shuffleButton = document.querySelector("#Shuffle");
+
+
+shuffleButton.addEventListener("click", () => {
+    isShuffling = !isShuffling;
+    shuffleButton.classList.toggle("active", isShuffling);
+});
+
+
+
+audio.addEventListener("ended", () => {
+
+        if (isShuffling) {
+            index = Math.floor(Math.random() * songDataBase.length);
+        } else {
+            index = (index + 1) % songDataBase.length;
+        }
+        loadMusic(index);
+        play();
+    
+});
+
 
 // Initialize the player
 loadMusic(index);
