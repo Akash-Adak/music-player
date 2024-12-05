@@ -43,7 +43,7 @@ const songDataBase = [
     songSrc: "music5.mp3",
     title: "Chal Tere Ishq Mein",
     artist: "Vishal Mishra",
-    imgSrc: "./images/img3.jpg"  },
+    imgSrc: "./images/img5.jpg"  },
   {
     songSrc: "music6.mp3",
     title: "Mere Mehboob",
