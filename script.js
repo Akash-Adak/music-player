@@ -32,55 +32,55 @@ const songDataBase = [
     songSrc: "music1.mp3",
     title: "Aaj Ki Rat",
     artist: " Madhubanti Bagchi and Divya Kumar",
-    imgSrc: "/images/img1.jpg" },
+    imgSrc: "./images/img1.jpg" },
  
   {
     songSrc: "music4.mp3",
     title: "Sanam Teri Kasam",
     artist: "Ankit Tiwari and Palak Muchhal",
-    imgSrc: "/images/img4.jpg" },
+    imgSrc: "./images/img4.jpg" },
   {
     songSrc: "music5.mp3",
     title: "Chal Tere Ishq Mein",
     artist: "Vishal Mishra",
-    imgSrc: "/images/img3.jpg"  },
+    imgSrc: "./images/img3.jpg"  },
   {
     songSrc: "music6.mp3",
     title: "Mere Mehboob",
     artist: "Sachet Tandon and Shilpa Rao",
-    imgSrc: "/images/img6.jpg"
+    imgSrc: "./images/img6.jpg"
   },
     {
     songSrc: "music7.mp3",
     title: "Afreen Afreen",
     artist: "Momina Mustehsan and Rahat Fateh Ali Khan",
-    imgSrc: "/images/img7.jpg"  },
+    imgSrc: "./images/img7.jpg"  },
  
   {
     songSrc: "music9.mp3",
     title: " O Sajni Re",
     artist: "Arijit Singh",
-    imgSrc: "/images/img9.jpg"  },
+    imgSrc: "./images/img9.jpg"  },
   {
     songSrc: "music10.mp3",
     title: "Aasa kooda",
     artist: "ai Abhyankkar and Sai Smriti",
-    imgSrc: "/images/img10.jpg"  },
+    imgSrc: "./images/img10.jpg"  },
   {
     songSrc: "music11.mp3",
     title: "Talab Hai Tu ",
     artist: " Arijit Singh",
-    imgSrc: "/images/img11.jpg"  },
+    imgSrc: "./images/img11.jpg"  },
   {
     songSrc: "music12.mp3",
     title: "Thara Paisa Thari Daulat",
     artist: "Dharmendar",
-    imgSrc: "/images/img12.jpg"  },
+    imgSrc: "./images/img12.jpg"  },
   {
     songSrc: "music13.mp3",
     title: "Ami Je Tomar 3.0",
     artist: "Shreya Ghoshal, Amaal Mallik, Sameer, and Pritam",
-   imgSrc: "/images/img13.jpg"
+   imgSrc: "./images/img13.jpg"
    },
 
 ];
