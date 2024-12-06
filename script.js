@@ -85,8 +85,6 @@ const songDataBase = [
 
 ];
 
-
-
 const loadMusic = () => {
   audio.src = songDataBase[index].songSrc;
   artist.textContent = songDataBase[index].artist;
@@ -116,14 +114,17 @@ const play = () => {
   isPlaying = true;
   audio.play();
   playPauseButton.classList.replace("fa-play", "fa-pause");
-  // highlightPlayingSongI(index);
-
+  highlightPlayingSong(index);
 };
+
+
 const pause = () => {
+  const items = playlistEl.getElementsByTagName('li');
   isPlaying = false;
   audio.pause();
   playPauseButton.classList.replace("fa-pause", "fa-play");
- 
+  items[index].classList.remove('playing');
+
 };
 
 playPauseButton.addEventListener("click", () => {
@@ -156,8 +157,6 @@ progressBar.addEventListener("click", (event) => {
     (event.offsetX / event.srcElement.clientWidth) * duration;
   audio.currentTime = moreProgress;
 });
-
-
 
 function populatePlaylist() {
     songDataBase.forEach((song, index) => {
@@ -193,17 +192,11 @@ function highlightPlayingSong(index) {
 }
 
 let isShuffling = false;
-let isRepeating = false;
-
 const shuffleButton = document.querySelector("#Shuffle");
-
-
 shuffleButton.addEventListener("click", () => {
     isShuffling = !isShuffling;
     shuffleButton.classList.toggle("active", isShuffling);
 });
-
-
 
 audio.addEventListener("ended", () => {
 
