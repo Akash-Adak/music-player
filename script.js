@@ -79,7 +79,7 @@ const songDataBase = [
   {
     songSrc: "music13.mp3",
     title: "Ami Je Tomar 3.0",
-    artist: "Shreya Ghoshal, Amaal Mallik, Sameer, and Pritam",
+    artist: "Shreya Ghoshal, Amaal Mallik and Pritam",
    imgSrc: "./images/img13.jpg"
    },
 
