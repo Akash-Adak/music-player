@@ -78,22 +78,18 @@
   
   #ContentWarpper{
     box-shadow: 10px 10px 10px red;
-    /* filter: drop-shadow(2px 2px 2px rgb(172, 56, 56)); */
   }
   #ContentWarpper #WholeCardContainer #MusicImg {
     width: 150px;
     height: 150px;
     margin: 10px auto;
     overflow: hidden;
-    /* filter: drop-shadow(2px 2px 2px white); */
-    /* box-shadow: 2px 2px 2px red; */
   }
   
   #AllInBody #ContentWarpper #WholeCardContainer #MusicImg img {
     width: 100%;
     height: 100%;
     border-radius: 20%;
-    /* border: 5px solid #ff006a; */
     -o-object-fit: cover;
        object-fit: cover;
     -webkit-transition: 0.2s;
@@ -165,9 +161,6 @@
   
   #AllInBody #ContentWarpper #Progress_elements {
     padding: 10px 0px;
-    /* background: -webkit-gradient(linear, right top, left top, from(#00eeff), to(#ff006a));
-    background: linear-gradient(to left, #00eeff, #ff006a); */
-    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
     font-family: 'Goldman', cursive;
     font-weight: 900;
@@ -201,10 +194,6 @@
     background: linear-gradient(45deg, #00e1ff, #ff0077);
     border-radius: 50px;
   }
-  
-
-  
- 
   
   @-webkit-keyframes imgAnime {
     from {
@@ -252,11 +241,6 @@
     }
   }
 
-
-
-
-
-  /* Playlist Container Styles */
 #PlaylistContainer {
   background: #f5f5f5;
   border-radius: 10px;
@@ -281,6 +265,8 @@
   color: #e98c8c;
 }
 
+
+
 #Playlist li {
   padding: 10px 15px;
   border-bottom: 1px solid #e85d5d;
@@ -289,7 +275,48 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; 
 }
+
+#Playlist li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px; 
+  width: 25px; 
+  height: 25px; 
+  background: url('./images/ply.png') no-repeat center center;
+  background-size: cover;
+  transform: translateY(-50%);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #Playlist li {
+      padding: 8px 12px; 
+  }
+
+  #Playlist li::after {
+      right: 10px; 
+      width: 20px; 
+      height: 20px; 
+  }
+}
+
+@media (max-width: 480px) {
+  #Playlist li {
+      padding: 6px 10px; 
+  }
+
+  #Playlist li::after {
+      right: 5px; 
+      width: 15px; 
+      height: 15px; 
+  }
+}
+
+
+
 
 #Playlist li:hover {
   background: #300e25;
@@ -311,18 +338,26 @@
 }
 
 
-/* #Playlist li:hover .play-icon {
-  color: #007BFF;
-} */
 
-/* Highlight currently playing song */
 #Playlist li.playing {
-  background: #8c364a;
+  background: #8c364a; 
   color: rgb(241, 236, 236);
-
+  position: relative;
+  padding-right: 50px; 
 }
 
-/* Media Queries */
+#Playlist li.playing::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 10px; 
+  width: 40px;
+  height: 70px; 
+  background: url('./images/gif1.gif') no-repeat center center;
+  background-size: cover;
+  transform: translateY(-50%);
+}
+
 @media (max-width: 768px) {
   #PlaylistContainer {
       padding: 15px;
@@ -332,10 +367,7 @@
       font-size: 20px;
   }
 
-  #Playlist li {
-      padding: 8px 12px;
-  }
-
+ 
   #Playlist li span {
       font-size: 14px;
   }
@@ -354,12 +386,6 @@
       font-size: 18px;
   }
 
-  #Playlist li {
-      padding: 6px 10px;
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
   #Playlist li span {
       font-size: 12px;
   }
@@ -369,14 +395,6 @@
   }
 }
 
-
-/* 
-button.active {
-  background-color: #007BFF;
-  color: white;
-} */
-
-/* Style for the shuffle button */
 #Shuffle {
   display: inline-block;
   padding: 10px 20px;
@@ -388,17 +406,15 @@ button.active {
   border: 2px solid #c55861;
   border-radius: 25px;
   cursor: pointer;
-  /* transition: background-color 0.3s ease, transform 0.3s ease; */
 }
 
 #Shuffle:hover {
-  background-color: #a23747; /* Darker blue on hover */
+  background-color: #a23747; 
 
  } 
 
 #Shuffle.active {
-  background-color: #b23131; /* Even darker blue when active (clicked) */
-  /* transform: scale(0.95); Slightly shrink button when clicked */
+  background-color: #b23131; 
 }
 
 
